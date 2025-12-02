@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+ <HTML>
+  <HEAD>
+    <TITLE>Галерея</TITLE>
+       <meta charset="UTF-8">
+       <meta name = "description" content=" ">
+       <meta name = "keywords" content=" ">
+	   <link rel="icon" href="Фото/Літак.ico" type="image/x-icong">
+  </HEAD>
+ <BODY>
+ <a name="Travel Hub"></a>
+ <div class="airplane airplane-1"></div>
+ <div class="airplane airplane-2"></div>
+ <div class="airplane airplane-3"></div>
+ <div class="airplane airplane-4"></div>
+ <style>
+ *{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: Work Sans;
+ }
+ BODY{
+   background-color:#f5f5f5;
+ }
+ .airplane {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-image: url('Фото/Літак1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.7;
+}
+.airplane-1 {
+    top: 20%;
+    animation: flyRight 20s linear infinite;
+}
+.airplane-2 {
+    top: 40%;
+    animation: flyLeft 25s linear infinite 5s;
+}
+.airplane-3 {
+    top: 70%;
+    animation: flyRight 30s linear infinite 10s;
+}
+.airplane-4 {
+    top: 80%;
+    animation: flyRight 15s linear infinite 5s;
+}
+@keyframes flyRight {
+0% {
+   left: -100px;
+   transform: rotate(0deg);
+}
+100% {
+   left: 100%;
+   transform: rotate(5deg);
+}
+}
+@keyframes flyLeft {
+0% {
+   right: -100px;
+   transform: scaleX(-1) rotate(0deg);
+}
+100% {
+    right: 100%;
+    transform: scaleX(-1) rotate(-5deg);
+}
+}
+.header{
+    background:#2c3e50;
+	color:white;
+	padding: 15px 0;
+	text-align:center;
+	position:relative;
+ }
+.header-container{
+    max-width:1200px;
+    margin:0 auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:0 20px;
+}
+.logo{
+    display:flex;
+	align-items:center;
+	gap:15px;
+}
+.logo img{
+    width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.logo h1{
+    font-size: 28px;
+	font-weight:bold;
+}
+.nav{
+    background:#2c3e50;
+	padding: 15px 0;
+}
+.nav-container{
+    max-width:1200px;
+	margin:0 auto;
+	display: flex;
+	justify-content: center;
+	gap:40px;
+	padding: 0 20px;
+}
+.nav a{
+    color:white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	transition: color 0.3s ease;
+}
+.nav a:hover{
+    color:#ffffe0;
+}
+.gallery-section{
+    max-width:1200px;
+	margin:40px auto;
+	padding:0 20px;
+}
+.section-title{
+    text-align:center;
+	color:#2c3e50;
+	font-size:36px;
+	margin-bottom:40px;
+	position:relative;
+}
+.section-title::after{
+    content:'';
+	display:block;
+	width:100px;
+	height:3px;
+	background:#3498db;
+	margin:15px auto;
+}
+.gallery-grid{
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap:30px;
+	margin-bottom: 50px;
+}
+.gallery-item {
+    position: relative;
+	border-radius: 15px;
+	overflow: hidden;
+}
+.gallery-item img{
+    width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+.gallery-overlay{
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	right:0;
+	background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+	color:white;
+	padding: 30px 20px 20px;
+}
+.gallery-title{
+    font-size:20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.gallery-description{
+    font-size: 14px;
+	opacity: 0.9;
+}
+.category-section {
+    margin: 60px 0;
+}
+.category-title {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.category-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.category-card:hover {
+    transform: scale(1.05);
+}
+.category-card img {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+}
+.category-card-content {
+     padding: 20px;
+}
+.category-card h3 {
+     color: #2c3e50;
+     margin-bottom: 10px;
+     font-size: 20px;
+}
+.category-card p {
+     color: #666;
+     line-height: 1.6;
+}
+.footer{
+     background:#2c3e50;
+	 color:white;
+	 padding: 40px 0 20px;
+	 margin-top: 60px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-content {
+    text-align: center;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-contact {
+    text-align: left;
+}
+.footer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+.footer-phone {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+.footer-social {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+.social-link {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+transform:scale(1.2);
+}
+.social-link img {
+border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.footer img:hover {
+    box-shadow: 0 0 10px white;
+}
+.scroll-top {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+}
+ </style>
+ <header class="header">
+   <div class="header-container">
+    <div class="logo">
+	<img src="Фото/Логотип.png" alt="Travel Hub Logo">
+    <h1>Travel Hub</h1>
+     </div>
+    </div>
+ </header>
+ <br><br><br>
+ <nav class="nav">
+  <div class="nav-container"> 
+     <a href="index.html">Головна</a>
+     <a href="tours.html">Тури</a>
+     <a href="gallery_block.html">Галерея</a>
+     <a href="reviews.html">Відгуки</a>
+     <a href="about.html">Про нас</a>
+     <a href="contacts.html">Контакти</a>	 
+  </div>
+ </nav>
+ <br><br><br>
+ <section class="gallery-section">
+   <h2 class="section-title">Наша галерея подорожей</h2>
+  <div class="gallery-grid">
+  <div class="gallery-item">
+  <img src="Фото/Італія.jpg" alt="Італія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Італія</div>
+  <div class="gallery-description">Рим, Венеція, Флоренція - подорож крізь віки</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Франція1.jpg" alt="Франція">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Франція</div>
+  <div class="gallery-description">Париж, Лазуринй берег, шампанське</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Греція.jpg" alt="Греція">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Греція</div>
+  <div class="gallery-description">Афіни, Санторіні, Крит, Родос - сонячні острови та історія</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Німеччина.png" alt="Німеччина">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Німеччина</div>
+  <div class="gallery-description">Берлін, Мюнхен, середньовічні замки та пивні традиції</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Велика Британія.jpg" alt="Велика Британія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Велика Британія</div>
+  <div class="gallery-description">Лондон, Шотландія, королівські палаци та старовинні традиції</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Швейцарія.jpg" alt="Швейцарія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Швейцарія</div>
+  <div class="gallery-description">Альпи, Женева, неймовірні пейзажі та шоколад</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Тайланд.jpg" alt="Тайланд">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Тайланд</div>
+  <div class="gallery-description">Бангкок, Пхукет, тропічні острови та храми</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Японія1.jpg" alt="Японія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Японія</div>
+  <div class="gallery-description">Токіо, Кіото, сакура та сучані технології</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Китай.jpg" alt="Китай">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Китай</div>
+  <div class="gallery-description">Велика стіна, Пекін, Шанхай та стародавня культура</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Південна Корея.jpg" alt="Південна Корея">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Південна Корея</div>
+  <div class="gallery-description">Сеул, k-pop, сучасна технологічна культура</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Азербайжан.jpg" alt="Азербайжан">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Азербайжан</div>
+  <div class="gallery-description">Баку, вогняні гори, старовинна архітектура та сучасні споруди</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/ОАЕ1.jpg" alt="ОАЕ">
+  <div class="gallery-overlay">
+  <div class="gallery-title">ОАЕ</div>
+  <div class="gallery-description">Дубай, Бурдж-Халіфа, розкішні молли та піщані пустелі</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/США.jpg" alt="США">
+  <div class="gallery-overlay">
+  <div class="gallery-title">США</div>
+  <div class="gallery-description">Нью-Йорк, Каліфорнія, Голлівуд та національні парки</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Канада.jpg" alt="Канада">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Канада</div>
+  <div class="gallery-description">Ніагарський водоспад, кленовий сироп та неймовірна природа</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Мексика1.jpg" alt="Мексика">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Мексика</div>
+  <div class="gallery-description">Канкун, старовинні піраміди майя та пляжі Карибського моря</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Бразилія.jpg" alt="Бразилія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Бразилія</div>
+  <div class="gallery-description">Ріо-де-Женейро, карнавал та Амазонка</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Аргентина.jpg" alt="Аргентина">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Аргентина</div>
+  <div class="gallery-description">Буенос-Айрес, танго та водоспади Ігуасу</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Гренландія.jpg" alt="Гренландія">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Гренландія</div>
+  <div class="gallery-description">Айсберги, північне сяйво та арктична природа</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Балі1.jpg" alt="Балі">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Балі</div>
+  <div class="gallery-description">Райські пляжі, рисові тераси та духовні монастирі</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Марокко.jpg" alt="Марокко">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Марокко</div>
+  <div class="gallery-description">Марракеш, Сахара, арабські ринки та берберська культура</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Куба.jpg" alt="Куба">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Куба</div>
+  <div class="gallery-description">Гавана, ретро-авто, сигари та карибська атмосфера</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Сейшели.jpg" alt="Сейшели">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Сейшели</div>
+  <div class="gallery-description">Гранітні острови, білосніжні пляжі та кокосові пальми</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/М'янма.jpg" alt="М'янма">
+  <div class="gallery-overlay">
+  <div class="gallery-title">М'янма</div>
+  <div class="gallery-description">Золоті пагоди, озеро Інле та стародавні храми</div>
+  </div>
+  </div>
+  <div class="gallery-item">
+  <img src="Фото/Мальдіви.jpg" alt="Мальдіви">
+  <div class="gallery-overlay">
+  <div class="gallery-title">Мальдіви</div>
+  <div class="gallery-description">Райські острови з білосніжними пляжами</div>
+  </div>
+  </div>
+ </section>
+ <section class="gallery-section">
+  <div class="category-section">
+  <h3 class="category-title">Популярні типи турів</h3>
+  <div class="category-grid">
+  <div class="category-card">
+  <img src="Фото/Пляжний відпочинок.png" alt="Пляжний відпочинок">
+  <div class="category-card-content">
+  <h3>Пляжний відпочинок</h3>
+  <p>Кращі курорти з блакитним морем та білосніжними пляжами</p>
+  </div>
+  </div>
+ <div class="category-card">
+  <img src="Фото/Екскурсійні тури.jpg" alt="Екскурсійні тури">
+  <div class="category-card-content">
+  <h3>Екскурсійні тури</h3>
+  <p>Історичні пам'ятки, музеї та культурні скарби світу</p>
+  </div>
+  </div>
+  <div class="category-card">
+  <img src="Фото/Гірськолижні курорти.jpg" alt="Гірськолижні курорти">
+  <div class="category-card-content">
+  <h3>Гірськолижні курорти</h3>
+  <p>Альпи, Карпати, сучасні траси та зимові розваги</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+<footer class="footer">
+ <div class="footer-container">
+ <div class="footer-content">
+ <div class="footer-info">
+ <div class="footer-contact">
+    <p class="footer-name">&copy;Анастасія Гармаш</p>
+    <p class="footer-phone">тел. +380957516621</p>
+ <div class="footer-social">
+    <a href="https://www.instagram.com/an_as7729?igsh=MTd6Zm85Nnh1M2pkaA==" class="social-link">
+    <img src="Фото/Інстаграм.png" alt="Instagram" width="25" height="25">
+    </a>
+    <a href="https://www.facebook.com/share/17PyBPH2ch/" class="social-link">
+    <img src="Фото/Фейсбук.png" alt="Facebook" width="25" height="25">
+    </a>
+    <a href="t.me/nataNg18" class="social-link">
+    <img src="Фото/Телеграм.png" alt="Telegram" width="25" height="25">
+     </a>
+ </div>
+ </div>
+ </div>
+ </div>
+</footer>
+<div class="scroll-top">
+<a href="#Travel Hub">
+ <img src="Фото/Стрілка.png" alt="Наверх" width="20" height="20">
+</a>
+</div>
+ </BODY>
+ </HTML>

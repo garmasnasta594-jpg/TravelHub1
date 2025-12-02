@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+ <HTML>
+  <HEAD>
+    <TITLE>Відгуки</TITLE>
+       <meta charset="UTF-8">
+       <meta name = "description" content=" ">
+       <meta name = "keywords" content=" ">
+	   <link rel="icon" href="Фото/Літак.ico" type="image/x-icong">
+  </HEAD>
+ <BODY>
+ <a name="Travel Hub"></a>
+ <div class="airplane airplane-1"></div>
+ <div class="airplane airplane-2"></div>
+ <div class="airplane airplane-3"></div>
+ <div class="airplane airplane-4"></div>
+ <style>
+ body {
+    font-family: Work Sans;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.airplane {
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    background-image: url('Фото/Літак1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.7;
+}
+.airplane-1 {
+    top: 12%;
+    animation: flyRight 20s linear infinite;
+}
+.airplane-2 {
+    top: 31%;
+    animation: flyLeft 25s linear infinite 5s;
+}
+.airplane-3 {
+    top: 50%;
+    animation: flyRight 30s linear infinite 10s;
+}
+.airplane-4 {
+    top: 95%;
+    animation: flyRight 15s linear infinite 5s;
+}
+@keyframes flyRight {
+0% {
+   left: -100px;
+   transform: rotate(0deg);
+}
+100% {
+   left: 100%;
+   transform: rotate(5deg);
+}
+}
+@keyframes flyLeft {
+0% {
+   right: -100px;
+   transform: scaleX(-1) rotate(0deg);
+}
+100% {
+    right: 100%;
+    transform: scaleX(-1) rotate(-5deg);
+}
+}
+table.header {
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+	border-radius: 10px;
+}
+table.header h1 { 
+    text-align:center;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+table.header1 {
+    width: 100%;
+    background: #2c3e50;
+    text-align: center;
+	border-radius: 10px;
+}
+table.header1 td {
+    padding: 15px;
+}
+table.header1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+table.header1 a:hover {
+    color:#ffffe0;
+}
+table.main-content {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+table.main-content h2 {
+    color:#2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+table.main-content1 {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+table.main-content1 td {
+    padding: 25px;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fafafa;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+}
+table.main-content1 h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+table.main-content1 td:hover {
+    background: #f8f9fa;
+    border-color: #2c3e50;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+.review-box {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}       
+.review-author {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.review-text {
+    color: #333;
+    line-height: 1.6;
+}       
+.review-date {
+    color: #7f8c8d;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 10px;
+}
+table.main-content2 {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+table.main-content2 h3 {
+    color:#2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+.formt {
+    width: 90%;
+    margin: 30px auto;
+	background: white;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	border-left: 4px solid #3498db;
+	border-radius: 10px;
+    padding: 25px;	
+}      
+.formt td {
+    padding: 12px 15px;
+    vertical-align: top;
+}     
+.form-label {
+    display: block;
+    font-weight: bold;
+    color: #2c3e50;
+	margin-bottom: 5px;
+}
+input[type="text"], input[type="email"],textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}       
+.formt textarea {
+    height: 100px;
+    resize: vertical;
+}      
+.formt input[type="submit"] {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+	font-weight:bold;
+	display: block;
+    cursor: pointer;
+	margin: 20px auto 0;
+}       
+.formt input[type="submit"]:hover {
+     background: #2980b9;
+}
+table.footer {
+    width: 100%;
+    margin: 20px auto;
+    background:#2c3e50;
+    color: white;
+	border-radius:10px;
+}
+table.footer td {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+table.footer a{
+    display:inline-block;
+    transition:transform 0.3s ease;
+}
+table.footer a:hover{
+    transform:scale(1.2);
+}
+table.footer img {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+table.footer img:hover {
+    box-shadow: 0 0 10px white;
+}
+.scroll-top {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+}
+ </style>
+ <table class="header">
+    <tr>
+      <td width="100" style="padding-left:20px;"><img src="Фото/Логотип.png" alt="Travel Hub Logo" width="80" height="80" style=" border-radius:50px;"></td>
+	  <td><h1 align="center">Travel Hub</h1></td>
+    </tr>
+ </table>
+ <br><br><br>
+ <table class="header1">
+  <tr>
+	  <td><a href="index.html">Головна</a></td>
+	  <td><a href="tours.html">Тури</a></td>
+	  <td><a href="gallery_block.html">Галерея</a></td>
+	  <td><a href="reviews.html">Відгуки</a></td>
+	  <td><a href="about.html">Про нас</a></td>
+	  <td><a href="contacts.html">Контакти</a></td>
+  </tr>
+ </table>
+ <br><br><br>
+ <table class="main-content">
+ <tr>
+ <td>
+<h2>Відгуки наших клієнтів</h2>
+</td>
+</tr>
+</table>
+<table class="main-content1">
+<tr>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Марія, Львів</h3></div>
+   <div class="review-text">«Дякую за чудово організовану подорож до Риму! Все було ідеально - від підбору готелю в центрі міста до цікавих екскурсій. Особливо вразив індивідуальний підхід - врахували всі наші побажання щодо харчування. Гід був дуже приємний. Обов'язково скористаємось вашими послугами ще!»</div>
+   <div class="review-date">15 листопада 2024</div>
+   </div>
+</td>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Олександр та Ірина, Київ</h3></div>
+   <div class="rewiew-text">«Мріяли про Мальдіви роками, і ви зробили цю мрію реальністю! Надзвичайно професійний підбір курорту, всі трансфери пройшли чітко за розкладом. Персональний менеджер був на зв'язку 24/7, що дуже важливо для першої подорожі до Азії. Це був найкращий медовий місяць, про який ми могли мріяти!»</div>
+   <div class="review-date">квітень 2024</div>
+   </div>
+</td>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Наталія, Харків</h3></div>
+   <div class="rewiew-text">«Подорожували з двома дітьми (5 і 8 років). Персонал агентства підібрали ідеальний маршрут, врахувавши всі особливості подорожі з дітьми. Готель був з чудовою інфраструктурою для дітей, трансфери комфортні, а екскурсії цікаві навіть для маленьких туристів. Дякуємо за турботу!»</div>
+   <div class="review-date">липень 2024</div>
+   </div>
+   </td>
+</tr>
+</table>
+<table class="main-content1">
+<tr>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Тетяна, Вінниця</h3></div>
+   <div class="review-text">«Хотілося подякувати за чудово організований тур до Франції! Програма була дуже насиченою, але без поспіху. Гід володів глибокими знаннями історії та культури. Особливо ціную допомогу у отриманні шенгенської візи - все зробили швидко та якісно. Обов'язково повернемось до вас за новими враженнями!»</div>
+   <div class="review-date">вересень 2024</div>
+   </div>
+   </td>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Павло, Одеса</h3></div>
+   <div class="review-text">«Організовував через ваше агентство корпоративну поїздку для колективу з 15 осіб. Вразив рівень сервісу - від моменту підбору туру до повернення додому. Усі питання вирішувались оперативно, гід був дуже кваліфікований. Колеги залишились дуже задоволені! Рекомендую для організації групових турів.»</div>
+   <div class="review-date">червень 2024</div>
+   </div>
+</td>
+<td>
+<div class="review-box">
+ <div class="review-author"><h3>Андрій, Дніпро</h3></div>
+   <div class="review-text">«Замовляв через агентство гірськолижний тур в Буковель. Вразив професійний підбір - менеджери чудово орієнтуються в нюансах активного відпочинку. Підібрали оптимальний варіант проживання біля підйомників, організували прокат обладнання. Все пройшло на високому рівні! Вже планую наступну поїздку через вас.»</div>
+   <div class="review-date">січень 2024</div>
+   </div>
+</td>
+</tr>
+</table>
+<br><br><br>
+<table class="main-content2">
+<tr>
+<td><h3>Форма для відгуків</h3></td>
+</tr>
+</table>
+<table class="formt">
+<form action="  " method="post">
+<tr>
+<td width="150" class="form-label">Ваше ім'я</td>
+<td>
+<input type="text" name="name" required placeholder="Введіть ваше ім'я">
+</td>
+</tr>
+<tr>
+<td class="form-label">Ваш email:</td>
+<td>
+<input type="email" name="email" required placeholder="Введіть ваш email">
+</td>
+</tr>
+<tr>
+<td class="form-label">Назва туру:</td>
+<td>
+<input type="text" name="tour" placeholder="Який тур ви обирали?">
+</td>
+</tr>
+<tr>
+<td class="form-label" style="vertical-align:top;">Ваш відгук</td>
+<td>
+<textarea name="review"required placeholder="Розкажіть про ваші враження:"></textarea>
+</td>
+</tr>
+<td>
+<input type="submit" value="Надіслати відгук">
+</td>
+</form>
+</td>
+</tr>
+</table>
+<br><br><br>
+<table class="footer">
+     <tr>
+       <td>&copy;Анастасія Гармаш</td>
+	   <td>тел. +380957516621</td>
+	   <td><a href="https://www.instagram.com/an_as7729?igsh=MTd6Zm85Nnh1M2pkaA=="><img src="Фото/Інстаграм.png" align="center" height="25" width="25" title="Іконка"></a></td>
+	   <td><a href="https://www.facebook.com/share/17PyBPH2ch/"><img src="Фото/Фейсбук.png" align="center" height="25" width="25" title="Іконка"></a></td>
+	   <td><a href="t.me/nataNg18"><img src="Фото/Телеграм.png" align="center" height="25" width="25" title="Іконка"></a></td>
+     </tr>
+</table>
+<div class="scroll-top">
+<a href="#Travel Hub">
+ <img src="Фото/Стрілка.png" alt="Наверх" width="20" height="20">
+</a>
+</div>
+ </BODY>
+ </HTML>

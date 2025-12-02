@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+ <HTML>
+  <HEAD>
+    <TITLE>Про нас</TITLE>
+       <meta charset="UTF-8">
+       <meta name = "description" content=" ">
+       <meta name = "keywords" content=" ">
+	   <link rel="icon" href="Фото/Літак.ico" type="image/x-icong">
+  </HEAD>
+ <BODY>
+ <a name="Travel Hub"></a>
+ <div class="airplane airplane-1"></div>
+ <div class="airplane airplane-2"></div>
+ <div class="airplane airplane-3"></div>
+ <div class="airplane airplane-4"></div>
+ <style>
+  body {
+    font-family: Work Sans;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.airplane {
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    background-image: url('Фото/Літак1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.7;
+}
+.airplane-1 {
+    top: 12%;
+    animation: flyRight 20s linear infinite;
+}
+.airplane-2 {
+    top: 31%;
+    animation: flyLeft 25s linear infinite 5s;
+}
+.airplane-3 {
+    top: 50%;
+    animation: flyRight 30s linear infinite 10s;
+}
+.airplane-4 {
+    top: 95%;
+    animation: flyRight 15s linear infinite 5s;
+}
+@keyframes flyRight {
+0% {
+   left: -100px;
+   transform: rotate(0deg);
+}
+100% {
+   left: 100%;
+   transform: rotate(5deg);
+}
+}
+@keyframes flyLeft {
+0% {
+   right: -100px;
+   transform: scaleX(-1) rotate(0deg);
+}
+100% {
+    right: 100%;
+    transform: scaleX(-1) rotate(-5deg);
+}
+}
+table.header {
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+	border-radius: 10px;
+}
+table.header h1 { 
+    text-align:center;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+table.header1 {
+    width: 100%;
+    background: #2c3e50;
+    text-align: center;
+	border-radius: 10px;
+}
+table.header1 td {
+    padding: 15px;
+}
+table.header1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+table.header1 a:hover {
+    color:#ffffe0;
+}
+table.main-content {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+table.main-content h2 {
+    color:#2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+table.main-content1 {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+	border: 0px;
+    border-radius: 10px;
+}
+table.main-content1 h3 {
+    text-align:center;
+	color:#2c3e50;
+}       
+table.main-content1 td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    border: 0px;
+}        
+table.main-content1 img {
+    border-radius: 10px;
+    border: 0px;
+}
+table.main-content2 {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+table.main-content2 td {
+    padding: 25px;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid #e0e0e0;
+	border-left: 4px solid #3498db;
+    border-radius: 10px;
+    background: #fafafa;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+}
+table.main-content2 h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+table.main-content2 td:hover {
+    background: #f8f9fa;
+    border-color: #2c3e50;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+.flip-card{
+    width:350px;
+	height:350px;
+	perspective:1000px;
+	margin:0 auto;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.flip-card-back {
+    background-color: #2c3e50;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flip-card-back h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+.flip-card-back ul {
+    text-align: left;
+    padding-left: 20px;
+}
+.flip-card-back li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+table.footer {
+    width: 100%;
+    margin: 20px auto;
+    background:#2c3e50;
+    color: white;
+	border-radius:10px;
+}
+table.footer td {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+table.footer a{
+    display:inline-block;
+    transition:transform 0.3s ease;
+}
+table.footer a:hover{
+    transform:scale(1.2);
+}
+table.footer img {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+table.footer img:hover {
+    box-shadow: 0 0 10px white;
+}
+.scroll-top {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+}      
+ </style>
+ <table class="header">
+    <tr>
+      <td width="100" style="padding-left:20px;"><img src="Фото/Логотип.png" alt="Travel Hub Logo" width="80" height="80" style=" border-radius:50px;"></td>
+	  <td><h1 align="center">Travel Hub</h1></td>
+    </tr>
+ </table>
+ <br><br><br>
+ <table class="header1">
+  <tr>
+	  <td><a href="index.html">Головна</a></td>
+	  <td><a href="tours.html">Тури</a></td>
+	  <td><a href="gallery_block.html">Галерея</a></td>
+	  <td><a href="reviews.html">Відгуки</a></td>
+	  <td><a href="about.html">Про нас</a></td>
+	  <td><a href="contacts.html">Контакти</a></td>
+  </tr>
+ </table>
+ <br><br><br>
+ <table class="main-content">
+ <tr>
+ <td>
+<h2>Про нашу компанію</h2>
+</td>
+</tr>
+</table>
+  <table class="main-content1">
+  <tr>
+  <td><h3>Наш колектив</h3><br>
+  <div class="flip-card">
+	    <div class="flip-card-inner">
+	     <div class="flip-card-front">
+  <img src="Фото/Колектив.jpg" width="350" height="250">
+  </div>
+  <div class="flip-card-back">
+	  <h4>Наші цінності</h4>
+	  <ul>
+	  <li>Професіоналізм</li>
+	  <li>Чесність</li>
+	  <li>Інновації</li>	  
+	  </ul>
+	  </div>
+	  </div>
+	 </div>
+  </td>
+  <td><h3>Ми подорожуємо</h3><br>
+  <div class="flip-card">
+	    <div class="flip-card-inner">
+	     <div class="flip-card-front">
+  <img src="Фото/Колективні подорожі.jpg" width="350" height="250">
+  </div>
+  <div class="flip-card-back">
+	  <h4>Чому обирають саме нас?</h4>
+	  <ul>
+	  <li>3 роки успішної роботи на ринку</li>
+	  <li>500+ щасливих клієнтів</li>
+	  <li>25 країн у нашому портфоліо</li>
+	  <li>Команда з 10 професіоналів</li>
+	  <li>95% клієнтів рекомендують нас</li>	  
+	  </ul>
+	  </div>
+	  </div>
+	 </div>
+  </td>
+  <td><h3>Заходи для об'єднання</h3><br>
+  <div class="flip-card">
+	    <div class="flip-card-inner">
+	     <div class="flip-card-front">
+  <img src="Фото/Ми об'єднані.jpg" width="350" height="250">
+  </div>
+  <div class="flip-card-back">
+	  <h4>Наші цінності</h4>
+	  <ul>
+	  <li>Відповідальність</li>
+	  <li>Клієнтоорієнтованість</li>
+	  <li>Любов до подорожей</li>	  
+	  </ul>
+	  </div>
+	  </div>
+	 </div>
+  </td>
+  </tr>
+  <tr>
+  </table>
+  <table class="main-content2">
+  <tr>
+  <td><h3>Наша історія</h3><br>Туристичне агентство Travel Hub було засновано у 2021 році в непростий для туристичної галузі час. Саме тоді ми зрозуміли – люди як ніколи потребують якісного відпочинку та професійного підходу до організації подорожей.</td>
+  <td><h3>Наша місія</h3><br>Робити якісний відпочинок доступним для кожного, створюючи незабутні враження та відкриваючи нові горизонти. Ми віримо, що подорожі мають бути не лише розвагою, але й джерелом натхнення, саморозвитку та культурного обміну. Наша місія – допомогти кожному знайти свою ідеальну подорож, незалежно від бюджету чи уподобань.</td>
+  <td><h3>Наша сила</h3><br>У здатності адаптуватися до змін та пропонувати актуальні туристичні рішення. Ми пишаємося тим, що 65% наших клієнтів повертаються до нас повторно та рекомендують нас своїм друзям.</td>
+  </tr>
+  </table>
+<br><br><br>
+<table class="footer">
+     <tr>
+       <td>&copy;Анастасія Гармаш</td>
+	   <td>тел. +380957516621</td>
+	   <td><a href="https://www.instagram.com/an_as7729?igsh=MTd6Zm85Nnh1M2pkaA=="><img src="Фото/Інстаграм.png" align="center" height="25" width="25" title="Іконка"></a></td>
+	   <td><a href="https://www.facebook.com/share/17PyBPH2ch/"><img src="Фото/Фейсбук.png" align="center" height="25" width="25" title="Іконка"></a></td>
+	   <td><a href="t.me/nataNg18"><img src="Фото/Телеграм.png" align="center" height="25" width="25" title="Іконка"></a></td>
+     </tr>
+</table>
+<div class="scroll-top">
+<a href="#Travel Hub">
+ <img src="Фото/Стрілка.png" alt="Наверх" width="20" height="20">
+</a>
+</div>
+ </BODY>
+ </HTML>
